@@ -23,11 +23,19 @@
     <Project Path="src/shared/SharedKernel/SharedKernel.csproj" Id="141f6693-255d-4856-ae5b-b674472e67c9" />
   </Folder>
   <Folder Name="/src/url-shortener/">
+    <Project Path="src/url-shortener/Invop.UrlShortener.Application/Invop.UrlShortener.Application.csproj" Id="ed4c021a-369f-4415-b548-1e4d56d535e2" />
+    <Project Path="src/url-shortener/Invop.UrlShortener.Domain/Invop.UrlShortener.Domain.csproj" Id="83f7c8bd-7725-4e9d-9ace-e4d0a59e5ab7" />
     <Project Path="src/url-shortener/Invop.UrlShortener.Frontend/Invop.UrlShortener.Frontend.esproj">
       <Build />
       <Deploy />
     </Project>
+    <Project Path="src/url-shortener/Invop.UrlShortener.Infrastructure/Invop.UrlShortener.Infrastructure.csproj" Id="524a05bd-25c4-4378-bd5b-a07002fa406f" />
     <Project Path="src/url-shortener/Invop.UrlShortener.Server/Invop.UrlShortener.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/url-shortener/">
+    <Project Path="tests/url-shortener/Invop.UrlShortener.Unit.Tests/Invop.UrlShortener.Unit.Tests.csproj" Id="b4f43780-d930-4162-9e68-b5243c99429f" />
+    <Project Path="tests/url-shortener/Invop.UrlShortener.Integrational.Tests/Invop.UrlShortener.Integrational.Tests.csproj" Id="967a4c1c-1db9-4952-97b7-1454a8583fb6" />
   </Folder>
 </Solution>
 
