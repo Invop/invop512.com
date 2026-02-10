@@ -19,6 +19,9 @@
       <Deploy />
     </Project>
   </Folder>
+  <Folder Name="/src/shared/">
+    <Project Path="src/shared/SharedKernel/SharedKernel.csproj" Id="141f6693-255d-4856-ae5b-b674472e67c9" />
+  </Folder>
   <Folder Name="/src/url-shortener/">
     <Project Path="src/url-shortener/Invop.UrlShortener.Frontend/Invop.UrlShortener.Frontend.esproj">
       <Build />
