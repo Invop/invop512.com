@@ -1,0 +1,38 @@
+﻿<Project>
+	<PropertyGroup>
+		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+	</PropertyGroup>
+	<ItemGroup>
+		<!--Static Analyzers-->
+		<PackageVersion Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="4.14.0" />
+		<PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
+		<PackageVersion Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.0.101" />
+
+		<!--API-->
+		<PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />
+		<PackageVersion Include="Aspire.StackExchange.Redis.OutputCaching" Version="13.1.0" />
+		<!--Aspire-->
+		<PackageVersion Include="Aspire.Hosting.Docker.SshDeploy" Version="0.1.0-ci.139" />
+		<PackageVersion Include="Aspire.Hosting.Docker" Version="13.1.0-preview.1.25616.3" />
+		<PackageVersion Include="Aspire.Hosting.Yarp" Version="13.1.0" />
+		<PackageVersion Include="Aspire.Hosting.JavaScript" Version="13.1.0" />
+		<PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="13.1.0" />
+		<PackageVersion Include="Aspire.Hosting.Redis" Version="13.1.0" />
+		<!--ServiceDefaults-->
+		<PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="10.1.0" />
+		<PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="10.1.0" />
+		<PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.14.0" />
+		<PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.14.0" />
+		<PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.14.0" />
+		<PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.14.0" />
+		<PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.14.0" />
+		<!--Tests-->
+		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+		<PackageVersion Include="xunit.v3" Version="3.2.1" />
+		<PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+		<PackageVersion Include="Shouldly" Version="4.3.0" />
+		<PackageVersion Include="NSubstitute" Version="5.3.0" />
+		<PackageVersion Include="NetArchTest.Rules" Version="1.3.2" />
+		<PackageVersion Include="Bogus" Version="35.6.5" />
+	</ItemGroup>
+</Project>

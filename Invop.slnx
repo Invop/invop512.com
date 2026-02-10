@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="CodingStandards.props" />
+    <File Path="CodingStandards.targets" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="nuget.config" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/aspire/">
+    <Project Path="src/aspire/Invop.AppHost/Invop.AppHost.csproj" />
+    <Project Path="src/aspire/Invop.ServiceDefaults/Invop.ServiceDefaults.csproj" Id="7df1d4de-bdb2-4031-a1ec-736b300e89c5" />
+  </Folder>
+  <Folder Name="/src/url-shortener/">
+    <Project Path="src/url-shortener/Invop.UrlShortener.Frontend/Invop.UrlShortener.Frontend.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+    <Project Path="src/url-shortener/Invop.UrlShortener.Server/Invop.UrlShortener.Server.csproj" />
+  </Folder>
+</Solution>
+
