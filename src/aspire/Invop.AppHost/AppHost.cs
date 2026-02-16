@@ -1,7 +1,8 @@
 ﻿#pragma warning disable IDE0059 // Unnecessary assignment of a value
-using Aspire.Hosting;
 
 var builder = DistributedApplication.CreateBuilder(args);
+
+var db = builder.AddPostgres("postgres");
 
 var keycloak = builder.AddKeycloak("keycloak", 8080)
     .WithRealmImport("./realms");
@@ -13,15 +14,26 @@ var invop512 = builder.AddJavaScriptApp("invop512", "../../invop512.com")
     .WithHttpEndpoint(env: "PORT")
     .WithExternalHttpEndpoints();
 
-var urlShortenerServer = builder.AddProject<Projects.Invop_UrlShortener_Server>("urlShortenerServer")
+#region urlShortener
+
+var urlShortenerTokenRangesDB = db.AddDatabase("urlShortener-token-rangesDB");
+
+var urlShortenerTokenRangeService = builder
+    .AddProject<Projects.Invop_UrlShortener_TokenRangeService>("urlShortener-token-range-service")
+    .WithReference(urlShortenerTokenRangesDB)
+    .WaitFor(urlShortenerTokenRangesDB);
+
+var urlShortenerServer = builder.AddProject<Projects.Invop_UrlShortener_Server>("urlShortener-server")
     .WithReference(keycloak)
     .WaitFor(keycloak)
     .WithReference(cache)
     .WaitFor(cache)
+    .WithReference(urlShortenerTokenRangeService)
+    .WaitFor(urlShortenerTokenRangeService)
     .WithHttpHealthCheck("/health")
     .WithExternalHttpEndpoints();
 
-var urlShortenerWebFrontend = builder.AddViteApp("urlShortenerWebFrontend", "../../url-shortener/Invop.UrlShortener.Frontend")
+var urlShortenerWebFrontend = builder.AddViteApp("urlShortener-frontend", "../../url-shortener/Invop.UrlShortener.Frontend")
     .WithNpm()
     .WithReference(keycloak)
     .WaitFor(keycloak)
@@ -29,6 +41,7 @@ var urlShortenerWebFrontend = builder.AddViteApp("urlShortenerWebFrontend", "../
     .WaitFor(urlShortenerServer);
 
 urlShortenerServer.PublishWithContainerFiles(urlShortenerWebFrontend, "wwwroot");
+#endregion
 
 builder.Build().Run();
 

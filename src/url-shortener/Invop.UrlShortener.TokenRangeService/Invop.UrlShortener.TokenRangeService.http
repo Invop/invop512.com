@@ -1,6 +1,7 @@
-@Invop.UrlShortener.TokenRangeService_HostAddress = http://localhost:5118
-
-GET {{Invop.UrlShortener.TokenRangeService_HostAddress}}/weatherforecast/
+﻿POST https://localhost:7233/assign
 Accept: application/json
+Content-Type: application/json
 
-###
+{
+  "key": "A1234"
+}

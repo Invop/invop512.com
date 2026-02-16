@@ -1,18 +1,24 @@
 ﻿<Project Sdk="Aspire.AppHost.Sdk/13.1.0">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <UserSecretsId>25c99457-434a-4b51-9f3d-eac2f5164233</UserSecretsId>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<UserSecretsId>25c99457-434a-4b51-9f3d-eac2f5164233</UserSecretsId>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.JavaScript" />
-    <PackageReference Include="Aspire.Hosting.Keycloak" />
-    <PackageReference Include="Aspire.Hosting.Redis" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Aspire.Hosting.JavaScript" />
+		<PackageReference Include="Aspire.Hosting.Keycloak" />
+		<PackageReference Include="Aspire.Hosting.Redis" />
+		<PackageReference Include="Aspire.Hosting.PostgreSQL" />
+	</ItemGroup>
 
-  <ItemGroup>    
-	  <ProjectReference Include="..\..\url-shortener\Invop.UrlShortener.Server\Invop.UrlShortener.Server.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\url-shortener\Invop.UrlShortener.Server\Invop.UrlShortener.Server.csproj" />
+		<ProjectReference Include="..\..\url-shortener\Invop.UrlShortener.TokenRangeService\Invop.UrlShortener.TokenRangeService.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="realms\" />
+	</ItemGroup>
 </Project>
 
