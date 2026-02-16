@@ -23,6 +23,8 @@ var urlShortenerTokenRangeService = builder
     .WithReference(urlShortenerTokenRangesDB)
     .WaitFor(urlShortenerTokenRangesDB);
 
+var urlShortenerDB = db.AddDatabase("urlShortenerDB");
+
 var urlShortenerServer = builder.AddProject<Projects.Invop_UrlShortener_Server>("urlShortener-server")
     .WithReference(keycloak)
     .WaitFor(keycloak)
@@ -30,6 +32,8 @@ var urlShortenerServer = builder.AddProject<Projects.Invop_UrlShortener_Server>(
     .WaitFor(cache)
     .WithReference(urlShortenerTokenRangeService)
     .WaitFor(urlShortenerTokenRangeService)
+    .WithReference(urlShortenerDB)
+    .WaitFor(urlShortenerDB)
     .WithHttpHealthCheck("/health")
     .WithExternalHttpEndpoints();
 

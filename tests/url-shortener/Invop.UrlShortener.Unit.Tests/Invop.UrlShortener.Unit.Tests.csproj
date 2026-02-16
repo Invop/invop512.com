@@ -29,4 +29,8 @@
 		<PackageReference Include="Bogus" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\src\url-shortener\Invop.UrlShortener.Server\Invop.UrlShortener.Server.csproj" />
+	</ItemGroup>
+
 </Project>
