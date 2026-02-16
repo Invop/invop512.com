@@ -31,11 +31,12 @@
     </Project>
     <Project Path="src/url-shortener/Invop.UrlShortener.Infrastructure/Invop.UrlShortener.Infrastructure.csproj" Id="524a05bd-25c4-4378-bd5b-a07002fa406f" />
     <Project Path="src/url-shortener/Invop.UrlShortener.Server/Invop.UrlShortener.Server.csproj" />
+    <Project Path="src/url-shortener/Invop.UrlShortener.TokenRangeService/Invop.UrlShortener.TokenRangeService.csproj" Id="9bc7aeb4-4979-4166-9e92-6985cc225e77" />
   </Folder>
   <Folder Name="/tests/" />
   <Folder Name="/tests/url-shortener/">
-    <Project Path="tests/url-shortener/Invop.UrlShortener.Unit.Tests/Invop.UrlShortener.Unit.Tests.csproj" Id="b4f43780-d930-4162-9e68-b5243c99429f" />
     <Project Path="tests/url-shortener/Invop.UrlShortener.Integrational.Tests/Invop.UrlShortener.Integrational.Tests.csproj" Id="967a4c1c-1db9-4952-97b7-1454a8583fb6" />
+    <Project Path="tests/url-shortener/Invop.UrlShortener.Unit.Tests/Invop.UrlShortener.Unit.Tests.csproj" Id="b4f43780-d930-4162-9e68-b5243c99429f" />
   </Folder>
 </Solution>
 
