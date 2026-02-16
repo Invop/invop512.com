@@ -1,6 +1,15 @@
+﻿
 @Server_HostAddress = http://localhost:5442
 
-GET {{Server_HostAddress}}/api/weatherforecast/
+POST {{Server_HostAddress}}/api/urls
 Accept: application/json
+Content-Type: application/json
 
+{
+  "LongUrl": "https://www.google.com"
+}
 ###
+
+
+GET {{Server_HostAddress}}/api/r/G8
+Accept: application/json

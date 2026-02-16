@@ -1,13 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Invop.UrlShortener.Application\Invop.UrlShortener.Application.csproj" />
-  </ItemGroup>
-
+	<ItemGroup>
+		<PackageReference Include="Aspire.Npgsql" />
+		<PackageReference Include="Dapper" />
+		<PackageReference Include="dbup-postgresql" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Database/Scripts/**/*.sql" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Invop.UrlShortener.Application\Invop.UrlShortener.Application.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Database\Scripts\" />
+	</ItemGroup>
 </Project>
